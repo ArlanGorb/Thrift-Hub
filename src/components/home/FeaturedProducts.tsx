@@ -11,7 +11,7 @@ export default function FeaturedProducts() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between mb-10">
           <div>
-            <p className="text-amber-700 font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-blue-800 font-semibold text-sm uppercase tracking-wider mb-2">
             Pilihan Terbaik
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-stone-800">      
@@ -20,7 +20,7 @@ export default function FeaturedProducts() {
           </div>
           <Link
             href="/products"
-            className="hidden sm:flex items-center gap-1.5 text-sm font-medium text-amber-800 hover:text-amber-900 transition-colors"
+            className="hidden sm:flex items-center gap-1.5 text-sm font-medium text-blue-900 hover:text-blue-950 transition-colors"
           >
             Lihat Semua <ArrowRight className="w-4 h-4" />
           </Link>
@@ -35,7 +35,7 @@ export default function FeaturedProducts() {
         <div className="sm:hidden mt-6 text-center">
           <Link
             href="/products"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-amber-800 hover:text-amber-900"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-900 hover:text-blue-950"
           >
             Lihat Semua Produk <ArrowRight className="w-4 h-4" />
           </Link>

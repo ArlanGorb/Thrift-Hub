@@ -167,7 +167,7 @@ function ProductDetailClient({
                     key={idx}
                     onClick={() => setActiveImage(idx)}
                     className={`relative w-20 h-20 rounded-xl overflow-hidden border-2 transition-colors ${
-                      activeImage === idx ? 'border-amber-700' : 'border-transparent hover:border-stone-300'
+                      activeImage === idx ? 'border-blue-800' : 'border-transparent hover:border-stone-300'
                     }`}
                   >
                     <Image src={img} alt={`View ${idx + 1}`} fill className="object-cover" />
@@ -181,7 +181,7 @@ function ProductDetailClient({
           <div>
             <div className="flex items-start justify-between gap-4 mb-4">
               <div>
-                <span className="text-xs font-semibold text-amber-700 bg-amber-50 px-3 py-1 rounded-full uppercase tracking-wide">
+                <span className="text-xs font-semibold text-blue-800 bg-blue-50 px-3 py-1 rounded-full uppercase tracking-wide">
                   {product.category}
                 </span>
               </div>
@@ -212,7 +212,7 @@ function ProductDetailClient({
             </div>
 
             {/* Price */}
-            <div className="text-4xl font-bold text-amber-800 mb-5">
+            <div className="text-4xl font-bold text-blue-900 mb-5">
               {formatPrice(product.price)}
             </div>
 
@@ -241,9 +241,9 @@ function ProductDetailClient({
                         disabled={!isAvailable}
                         className={`min-w-[42px] h-10 px-3 rounded-lg text-sm font-semibold border-2 transition-all ${
                           isSelected
-                            ? 'border-amber-700 bg-amber-700 text-white shadow-sm'
+                            ? 'border-blue-800 bg-blue-800 text-white shadow-sm'
                             : isAvailable
-                            ? 'border-stone-300 bg-white text-stone-700 hover:border-amber-500 hover:text-amber-700'
+                            ? 'border-stone-300 bg-white text-stone-700 hover:border-blue-600 hover:text-blue-800'
                             : 'border-stone-200 bg-stone-50 text-stone-300 line-through cursor-not-allowed'
                         }`}
                       >
@@ -298,7 +298,7 @@ function ProductDetailClient({
                 <button
                   onClick={handleAddToCart}
                   disabled={isOutOfStock}
-                  className="flex-1 flex items-center justify-center gap-2 bg-amber-800 text-white font-semibold py-3 rounded-xl hover:bg-amber-900 active:scale-95 transition-all disabled:opacity-50"
+                  className="flex-1 flex items-center justify-center gap-2 bg-blue-900 text-white font-semibold py-3 rounded-xl hover:bg-blue-950 active:scale-95 transition-all disabled:opacity-50"
                 >
                   <ShoppingCart className="w-5 h-5" /> Tambah ke Keranjang
                 </button>
@@ -313,7 +313,7 @@ function ProductDetailClient({
 
             <Link
               href="/cart"
-              className="block w-full text-center border-2 border-amber-800 text-amber-800 font-semibold py-3 rounded-xl hover:bg-amber-50 transition-colors"
+              className="block w-full text-center border-2 border-blue-900 text-blue-900 font-semibold py-3 rounded-xl hover:bg-blue-50 transition-colors"
             >
               Lihat Keranjang
             </Link>
@@ -326,7 +326,7 @@ function ProductDetailClient({
                 { icon: Shield, text: 'Pembayaran aman' },
               ].map((item) => (
                 <div key={item.text} className="flex flex-col items-center text-center gap-1.5">
-                  <item.icon className="w-5 h-5 text-amber-700" />
+                  <item.icon className="w-5 h-5 text-blue-800" />
                   <span className="text-xs text-stone-500">{item.text}</span>
                 </div>
               ))}
@@ -347,9 +347,9 @@ function ProductDetailClient({
 
           {localReviews.length > 0 ? (
             <>
-              <div className="flex items-center gap-4 mb-6 p-4 bg-amber-50 rounded-xl">
+              <div className="flex items-center gap-4 mb-6 p-4 bg-blue-50 rounded-xl">
                 <div className="text-center">
-                  <p className="text-4xl font-bold text-amber-800">{avgRating.toFixed(1)}</p>
+                  <p className="text-4xl font-bold text-blue-900">{avgRating.toFixed(1)}</p>
                   <StarRating rating={avgRating} size="sm" />
                   <p className="text-xs text-stone-500 mt-1">{localReviews.length} ulasan</p>
                 </div>
@@ -360,7 +360,7 @@ function ProductDetailClient({
                   <div key={review.id} className="border-b border-stone-100 pb-4 last:border-0">
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-full bg-amber-700 text-white flex items-center justify-center text-xs font-bold">
+                        <div className="w-8 h-8 rounded-full bg-blue-800 text-white flex items-center justify-center text-xs font-bold">
                           {review.user_name.charAt(0)}
                         </div>
                         <span className="font-semibold text-stone-800 text-sm">{review.user_name}</span>
@@ -389,7 +389,7 @@ function ProductDetailClient({
           ) : (
             <div className="mt-6 p-4 bg-stone-50 rounded-xl text-center">
               <p className="text-stone-600 text-sm mb-3">
-                <Link href="/auth/login" className="text-amber-700 font-semibold hover:underline">
+                <Link href="/auth/login" className="text-blue-800 font-semibold hover:underline">
                   Masuk
                 </Link>{' '}
                 untuk memberikan ulasan.

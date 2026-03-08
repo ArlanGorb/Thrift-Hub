@@ -38,7 +38,7 @@ export default function WishlistPage() {
           <p className="text-stone-500 mb-6">Simpan item favorit dan temukan di sini nanti.</p>
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 bg-amber-800 text-white font-bold px-6 py-3 rounded-xl hover:bg-amber-900 transition-colors"
+            className="inline-flex items-center gap-2 bg-blue-900 text-white font-bold px-6 py-3 rounded-xl hover:bg-blue-950 transition-colors"
           >
             Jelajahi Produk
             <ArrowRight className="w-4 h-4" />
@@ -56,7 +56,7 @@ export default function WishlistPage() {
             <h1 className="text-2xl font-bold text-stone-800">Favorit</h1>
             <p className="text-stone-500 text-sm mt-1">{wishlist.length} item tersimpan</p>
           </div>
-          <Link href="/products" className="text-amber-800 text-sm font-semibold hover:underline">
+          <Link href="/products" className="text-blue-900 text-sm font-semibold hover:underline">
             Lanjut Belanja →
           </Link>
         </div>
@@ -81,7 +81,7 @@ export default function WishlistPage() {
               </div>
 
               <div className="p-4">
-                <Link href={`/products/${product.id}`} className="hover:text-amber-800 transition-colors">
+                <Link href={`/products/${product.id}`} className="hover:text-blue-900 transition-colors">
                   <h3 className="font-semibold text-stone-800 text-sm line-clamp-2 mb-1">{product.name}</h3>
                 </Link>
                 <div className="flex items-center gap-2 mb-3">
@@ -91,11 +91,11 @@ export default function WishlistPage() {
                   <ConditionBadge condition={product.condition} />
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="font-bold text-amber-800 text-lg">{formatPrice(product.price)}</span>
+                  <span className="font-bold text-blue-900 text-lg">{formatPrice(product.price)}</span>
                   <button
                     onClick={() => handleAddToCart(product)}
                     disabled={product.stock === 0}
-                    className="flex items-center gap-1.5 bg-amber-800 text-white text-xs font-bold px-3 py-2 rounded-lg hover:bg-amber-900 disabled:bg-stone-200 disabled:text-stone-400 transition-colors"
+                    className="flex items-center gap-1.5 bg-blue-900 text-white text-xs font-bold px-3 py-2 rounded-lg hover:bg-blue-950 disabled:bg-stone-200 disabled:text-stone-400 transition-colors"
                   >
                     <ShoppingCart className="w-3.5 h-3.5" />
                     {product.stock === 0 ? 'Stok Habis' : 'Tambah ke Keranjang'}

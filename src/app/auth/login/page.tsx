@@ -35,11 +35,11 @@ export default function LoginPage() {
         {/* Logo */}
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-2 mb-4">
-            <div className="w-10 h-10 rounded-full bg-amber-800 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center">
               <Leaf className="w-5 h-5 text-white" />
             </div>
             <span className="text-2xl font-bold text-stone-800">
-              Thrift<span className="text-amber-700">Hub</span>
+              Thrift<span className="text-blue-800">Hub</span>
             </span>
           </Link>
           <h1 className="text-2xl font-bold text-stone-800">Selamat datang kembali</h1>
@@ -47,8 +47,8 @@ export default function LoginPage() {
         </div>
 
         {/* Demo hint */}
-        <div className="bg-amber-50 border border-amber-100 rounded-xl p-3 mb-6 text-xs text-stone-600">
-          <p className="font-semibold text-amber-800 mb-1">Akun Demo:</p>
+        <div className="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-6 text-xs text-stone-600">
+          <p className="font-semibold text-blue-900 mb-1">Akun Demo:</p>
           <p>🛒 Pelanggan: <code>user@thrifthub.com</code> / <code>user123</code></p>
           <p>⚙️ Admin: <code>admin@thrifthub.com</code> / <code>admin123</code></p>
           <p className="mt-1 text-stone-500">Atau masukkan email/password untuk masuk sebagai pengguna baru.</p>
@@ -71,7 +71,7 @@ export default function LoginPage() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
               required
-              className="w-full px-4 py-2.5 border border-stone-200 rounded-xl text-sm focus:border-amber-500 bg-white"
+              className="w-full px-4 py-2.5 border border-stone-200 rounded-xl text-sm focus:border-blue-600 bg-white"
             />
           </div>
 
@@ -86,7 +86,7 @@ export default function LoginPage() {
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
                 required
-                className="w-full px-4 py-2.5 pr-11 border border-stone-200 rounded-xl text-sm focus:border-amber-500 bg-white"
+                className="w-full px-4 py-2.5 pr-11 border border-stone-200 rounded-xl text-sm focus:border-blue-600 bg-white"
               />
               <button
                 type="button"
@@ -101,7 +101,7 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full flex items-center justify-center gap-2 bg-amber-800 text-white font-bold py-3 rounded-xl hover:bg-amber-900 disabled:opacity-50 transition-all active:scale-95"
+            className="w-full flex items-center justify-center gap-2 bg-blue-900 text-white font-bold py-3 rounded-xl hover:bg-blue-950 disabled:opacity-50 transition-all active:scale-95"
           >
             {loading ? (
               <>
@@ -116,7 +116,7 @@ export default function LoginPage() {
 
           <p className="text-center text-sm text-stone-500 mt-5">
             Belum punya akun?{' '}
-            <Link href="/auth/register" className="text-amber-800 font-semibold hover:underline">
+            <Link href="/auth/register" className="text-blue-900 font-semibold hover:underline">
               Buat akun baru
             </Link>
           </p>

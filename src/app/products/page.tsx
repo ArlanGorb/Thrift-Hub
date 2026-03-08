@@ -123,12 +123,12 @@ function ProductsContent() {
                 placeholder="Cari produk..."
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 border border-stone-200 rounded-xl text-sm focus:border-amber-500 bg-white"
+                className="w-full pl-10 pr-4 py-2.5 border border-stone-200 rounded-xl text-sm focus:border-blue-600 bg-white"
               />
             </div>
             <button
               type="submit"
-              className="px-4 py-2.5 bg-amber-800 text-white rounded-xl text-sm font-medium hover:bg-amber-900 transition-colors"
+              className="px-4 py-2.5 bg-blue-900 text-white rounded-xl text-sm font-medium hover:bg-blue-950 transition-colors"
             >
               Cari
             </button>
@@ -142,7 +142,7 @@ function ProductsContent() {
               <SlidersHorizontal className="w-4 h-4" />
               Filter
               {activeFilterCount > 0 && (
-                <span className="w-5 h-5 bg-amber-700 text-white text-xs rounded-full flex items-center justify-center">
+                <span className="w-5 h-5 bg-blue-800 text-white text-xs rounded-full flex items-center justify-center">
                   {activeFilterCount}
                 </span>
               )}
@@ -195,7 +195,7 @@ function ProductsContent() {
                       value=""
                       checked={!filters.category}
                       onChange={() => setFilters((f) => ({ ...f, category: '' }))}
-                      className="text-amber-700 accent-amber-700"
+                      className="text-blue-800 accent-blue-800"
                     />
                     <span className="text-sm text-stone-600">Semua</span>
                   </label>
@@ -207,7 +207,7 @@ function ProductsContent() {
                         value={cat}
                         checked={filters.category === cat}
                         onChange={() => setFilters((f) => ({ ...f, category: cat }))}
-                        className="accent-amber-700"
+                        className="accent-blue-800"
                       />
                       <span className="text-sm text-stone-600">{cat}</span>
                     </label>
@@ -227,7 +227,7 @@ function ProductsContent() {
                       }
                       className={`px-3 py-1 rounded-lg text-xs font-medium border transition-colors ${
                         filters.size === size
-                          ? 'bg-amber-800 text-white border-amber-800'
+                          ? 'bg-blue-900 text-white border-blue-900'
                           : 'border-stone-200 text-stone-600 hover:border-stone-300'
                       }`}
                     >
@@ -284,7 +284,7 @@ function ProductsContent() {
                           maxPrice: range.max,
                         }))
                       }
-                      className="text-xs px-2.5 py-1 border border-stone-200 rounded-lg text-stone-600 hover:border-amber-500 hover:text-amber-700 transition-colors"
+                      className="text-xs px-2.5 py-1 border border-stone-200 rounded-lg text-stone-600 hover:border-blue-600 hover:text-blue-800 transition-colors"
                     >
                       {range.label}
                     </button>
@@ -303,7 +303,7 @@ function ProductsContent() {
                 <p className="text-stone-500 mb-6">Coba sesuaikan filter atau kata kunci pencarian Anda.</p>
                 <button
                   onClick={clearFilters}
-                  className="px-6 py-2.5 bg-amber-800 text-white rounded-xl text-sm font-medium hover:bg-amber-900 transition-colors"
+                  className="px-6 py-2.5 bg-blue-900 text-white rounded-xl text-sm font-medium hover:bg-blue-950 transition-colors"
                 >
                   Hapus Filter
                 </button>
@@ -324,7 +324,7 @@ function ProductsContent() {
 
 export default function ProductsPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-10 h-10 border-4 border-amber-800 border-t-transparent rounded-full animate-spin" /></div>}>
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-10 h-10 border-4 border-blue-900 border-t-transparent rounded-full animate-spin" /></div>}>
       <ProductsContent />
     </Suspense>
   );

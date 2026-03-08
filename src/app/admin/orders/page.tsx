@@ -57,7 +57,7 @@ export default function AdminOrdersPage() {
   if (loading || !user || user.role !== 'admin') {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="w-10 h-10 border-4 border-amber-800 border-t-transparent rounded-full animate-spin" />
+        <div className="w-10 h-10 border-4 border-blue-900 border-t-transparent rounded-full animate-spin" />
       </div>
     );
   }
@@ -80,13 +80,13 @@ export default function AdminOrdersPage() {
               placeholder="Cari berdasarkan ID pesanan, nama, atau email..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 bg-white border border-stone-200 rounded-xl text-sm focus:border-amber-500 outline-none"
+              className="w-full pl-10 pr-4 py-2.5 bg-white border border-stone-200 rounded-xl text-sm focus:border-blue-600 outline-none"
             />
           </div>
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value as OrderStatus | 'all')}
-            className="px-4 py-2.5 bg-white border border-stone-200 rounded-xl text-sm focus:border-amber-500 outline-none"
+            className="px-4 py-2.5 bg-white border border-stone-200 rounded-xl text-sm focus:border-blue-600 outline-none"
           >
             <option value="all">Semua Status</option>
             {ALL_STATUSES.map((s) => (
@@ -121,7 +121,7 @@ export default function AdminOrdersPage() {
                   </div>
 
                   <div className="text-right flex-shrink-0">
-                    <p className="font-bold text-amber-800">{formatPrice(order.total_price)}</p>
+                    <p className="font-bold text-blue-900">{formatPrice(order.total_price)}</p>
                     <p className="text-xs text-stone-400">{formatDate(order.created_at)}</p>
                   </div>
 
@@ -130,7 +130,7 @@ export default function AdminOrdersPage() {
                     <select
                       value={order.status}
                       onChange={(e) => updateStatus(order.id, e.target.value as OrderStatus)}
-                      className="px-3 py-1.5 border border-stone-200 rounded-lg text-xs bg-white focus:border-amber-500 outline-none"
+                      className="px-3 py-1.5 border border-stone-200 rounded-lg text-xs bg-white focus:border-blue-600 outline-none"
                     >
                       {ALL_STATUSES.map((s) => (
                         <option key={s} value={s}>{getOrderStatusLabel(s)}</option>

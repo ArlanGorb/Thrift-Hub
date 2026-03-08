@@ -51,7 +51,7 @@ export default function CartPage() {
           </p>
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 bg-amber-800 text-white font-semibold px-7 py-3 rounded-xl hover:bg-amber-900 transition-colors"
+            className="inline-flex items-center gap-2 bg-blue-900 text-white font-semibold px-7 py-3 rounded-xl hover:bg-blue-950 transition-colors"
           >
             Jelajahi Produk <ArrowRight className="w-4 h-4" />
           </Link>
@@ -96,7 +96,7 @@ export default function CartPage() {
                 <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between gap-2">
                     <Link href={`/products/${item.product_id}`}>
-                      <h3 className="font-semibold text-stone-800 hover:text-amber-800 transition-colors line-clamp-2">
+                      <h3 className="font-semibold text-stone-800 hover:text-blue-900 transition-colors line-clamp-2">
                         {item.name}
                       </h3>
                     </Link>
@@ -140,7 +140,7 @@ export default function CartPage() {
                       </button>
                     </div>
 
-                    <span className="font-bold text-amber-800 text-lg">
+                    <span className="font-bold text-blue-900 text-lg">
                       {formatPrice(item.price * item.quantity)}
                     </span>
                   </div>
@@ -164,7 +164,7 @@ export default function CartPage() {
               {/* Promo code input */}
               <div className="mb-5">
                 <p className="text-sm font-medium text-stone-700 mb-2 flex items-center gap-1.5">
-                  <Tag className="w-4 h-4 text-amber-700" /> Kode Promo
+                  <Tag className="w-4 h-4 text-blue-800" /> Kode Promo
                 </p>
                 {appliedPromo ? (
                   <div className="flex items-center justify-between bg-green-50 border border-green-200 rounded-xl px-3 py-2.5">
@@ -185,12 +185,12 @@ export default function CartPage() {
                         onChange={(e) => { setPromoInput(e.target.value.toUpperCase()); setPromoError(''); }}
                         onKeyDown={(e) => e.key === 'Enter' && handleApplyPromo()}
                         placeholder="Masukkan kode promo"
-                        className="flex-1 px-3 py-2 text-sm border border-stone-200 rounded-xl focus:border-amber-500 outline-none bg-white"
+                        className="flex-1 px-3 py-2 text-sm border border-stone-200 rounded-xl focus:border-blue-600 outline-none bg-white"
                       />
                       <button
                         onClick={handleApplyPromo}
                         disabled={!promoInput.trim()}
-                        className="px-4 py-2 text-sm font-semibold bg-amber-800 text-white rounded-xl hover:bg-amber-900 disabled:opacity-40 transition-colors"
+                        className="px-4 py-2 text-sm font-semibold bg-blue-900 text-white rounded-xl hover:bg-blue-950 disabled:opacity-40 transition-colors"
                       >
                         Pakai
                       </button>
@@ -219,7 +219,7 @@ export default function CartPage() {
                   </span>
                 </div>
                 {shipping > 0 && (
-                  <p className="text-xs text-stone-500 bg-amber-50 p-2 rounded-lg">
+                  <p className="text-xs text-stone-500 bg-blue-50 p-2 rounded-lg">
                     Tambah {formatPrice(500000 - total)} lagi untuk gratis ongkir!
                   </p>
                 )}
@@ -228,14 +228,14 @@ export default function CartPage() {
               <div className="border-t border-stone-100 pt-4 mb-5">
                 <div className="flex justify-between">
                   <span className="font-bold text-stone-800">Total</span>
-                  <span className="font-bold text-xl text-amber-800">{formatPrice(finalTotal)}</span>
+                  <span className="font-bold text-xl text-blue-900">{formatPrice(finalTotal)}</span>
                 </div>
                 <p className="text-xs text-stone-500 mt-1">Termasuk pajak bila berlaku</p>
               </div>
 
               <Link
                 href={`/checkout?discount=${promoDiscount}&promo=${appliedPromo?.code ?? ''}`}
-                className="w-full flex items-center justify-center gap-2 bg-amber-800 text-white font-bold py-3.5 rounded-xl hover:bg-amber-900 transition-all active:scale-95"
+                className="w-full flex items-center justify-center gap-2 bg-blue-900 text-white font-bold py-3.5 rounded-xl hover:bg-blue-950 transition-all active:scale-95"
               >
                 Lanjut ke Pembayaran <ArrowRight className="w-5 h-5" />
               </Link>

@@ -35,7 +35,7 @@ export default function ReviewHighlights() {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <p className="text-amber-700 font-semibold text-sm uppercase tracking-wider mb-2">
+          <p className="text-blue-800 font-semibold text-sm uppercase tracking-wider mb-2">
             Komunitas Kami
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-stone-800 mb-3">
@@ -43,7 +43,7 @@ export default function ReviewHighlights() {
           </h2>
           <div className="flex items-center justify-center gap-2">
             {[1, 2, 3, 4, 5].map((s) => (
-              <Star key={s} className="w-5 h-5 fill-amber-400 text-amber-400" />
+              <Star key={s} className="w-5 h-5 fill-blue-500 text-blue-500" />
             ))}
             <span className="text-stone-600 font-medium ml-1">4,9 dari 5 (1.200+ ulasan)</span>
           </div>
@@ -55,10 +55,10 @@ export default function ReviewHighlights() {
               key={review.name}
               className="bg-stone-50 rounded-2xl p-6 border border-stone-100 relative"
             >
-              <Quote className="w-8 h-8 text-amber-200 absolute top-4 right-4" />
+              <Quote className="w-8 h-8 text-blue-300 absolute top-4 right-4" />
 
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-amber-700 text-white flex items-center justify-center text-sm font-bold">
+                <div className="w-10 h-10 rounded-full bg-blue-800 text-white flex items-center justify-center text-sm font-bold">
                   {review.avatar}
                 </div>
                 <div>
@@ -69,13 +69,13 @@ export default function ReviewHighlights() {
 
               <div className="flex gap-0.5 mb-3">
                 {Array.from({ length: review.rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                  <Star key={i} className="w-4 h-4 fill-blue-500 text-blue-500" />
                 ))}
               </div>
 
               <p className="text-stone-600 text-sm leading-relaxed mb-4">&ldquo;{review.review}&rdquo;</p>
 
-              <p className="text-xs text-amber-700 font-medium bg-amber-50 px-3 py-1.5 rounded-full inline-block">
+              <p className="text-xs text-blue-800 font-medium bg-blue-50 px-3 py-1.5 rounded-full inline-block">
                 Dibeli: {review.item}
               </p>
             </div>

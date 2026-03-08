@@ -50,11 +50,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-full bg-amber-800 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-full bg-blue-900 flex items-center justify-center">
               <Leaf className="w-4 h-4 text-white" />
             </div>
-            <span className="text-xl font-bold text-stone-800 group-hover:text-amber-800 transition-colors">
-              Thrift<span className="text-amber-700">Hub</span>
+            <span className="text-xl font-bold text-stone-800 group-hover:text-blue-900 transition-colors">
+              Thrift<span className="text-blue-800">Hub</span>
             </span>
           </Link>
 
@@ -66,7 +66,7 @@ export default function Navbar() {
                 href={link.href}
                 className={`text-sm font-medium nav-link pb-0.5 transition-colors ${
                   pathname === link.href
-                    ? 'text-amber-800'
+                    ? 'text-blue-900'
                     : 'text-stone-600 hover:text-stone-900'
                 }`}
               >
@@ -85,7 +85,7 @@ export default function Navbar() {
             <Link href="/cart" className="relative p-2 text-stone-600 hover:text-stone-900 transition-colors">
               <ShoppingCart className="w-5 h-5" />
               {itemCount > 0 && (
-                <span className="absolute top-0 right-0 w-5 h-5 bg-amber-700 text-white text-xs rounded-full flex items-center justify-center font-bold">
+                <span className="absolute top-0 right-0 w-5 h-5 bg-blue-800 text-white text-xs rounded-full flex items-center justify-center font-bold">
                   {itemCount > 9 ? '9+' : itemCount}
                 </span>
               )}
@@ -98,7 +98,7 @@ export default function Navbar() {
                   onClick={() => setUserMenuOpen(!userMenuOpen)}
                   className="flex items-center gap-2 p-2 text-stone-600 hover:text-stone-900 transition-colors rounded-lg hover:bg-stone-100"
                 >
-                  <div className="w-7 h-7 rounded-full bg-amber-700 text-white flex items-center justify-center text-xs font-bold uppercase">
+                  <div className="w-7 h-7 rounded-full bg-blue-800 text-white flex items-center justify-center text-xs font-bold uppercase">
                     {user.name.charAt(0)}
                   </div>
                   <span className="hidden sm:block text-sm font-medium">{user.name.split(' ')[0]}</span>
@@ -140,7 +140,7 @@ export default function Navbar() {
                         <Link
                           href="/admin"
                           onClick={() => setUserMenuOpen(false)}
-                          className="flex items-center gap-3 px-4 py-2.5 text-sm text-amber-700 hover:bg-amber-50 transition-colors font-medium"
+                          className="flex items-center gap-3 px-4 py-2.5 text-sm text-blue-800 hover:bg-blue-50 transition-colors font-medium"
                         >
                           <LayoutDashboard className="w-4 h-4" /> Dasbor Admin
                         </Link>
@@ -165,7 +165,7 @@ export default function Navbar() {
                 </Link>
                 <Link
                   href="/auth/register"
-                  className="text-sm font-medium bg-amber-800 text-white px-4 py-1.5 rounded-lg hover:bg-amber-900 transition-colors"
+                  className="text-sm font-medium bg-blue-900 text-white px-4 py-1.5 rounded-lg hover:bg-blue-950 transition-colors"
                 >
                   Daftar
                 </Link>
@@ -194,7 +194,7 @@ export default function Navbar() {
               onClick={() => setMobileOpen(false)}
               className={`block px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                 pathname === link.href
-                  ? 'bg-amber-50 text-amber-800'
+                  ? 'bg-blue-50 text-blue-900'
                   : 'text-stone-700 hover:bg-stone-50'
               }`}
             >
@@ -206,13 +206,13 @@ export default function Navbar() {
               <>
                 <Link href="/profile" onClick={() => setMobileOpen(false)} className="block px-3 py-2.5 text-sm text-stone-700 hover:bg-stone-50 rounded-lg">Profil Saya</Link>
                 <Link href="/orders" onClick={() => setMobileOpen(false)} className="block px-3 py-2.5 text-sm text-stone-700 hover:bg-stone-50 rounded-lg">Pesanan Saya</Link>
-                {isAdmin && <Link href="/admin" onClick={() => setMobileOpen(false)} className="block px-3 py-2.5 text-sm text-amber-700 hover:bg-amber-50 rounded-lg font-medium">Dasbor Admin</Link>}
+                {isAdmin && <Link href="/admin" onClick={() => setMobileOpen(false)} className="block px-3 py-2.5 text-sm text-blue-800 hover:bg-blue-50 rounded-lg font-medium">Dasbor Admin</Link>}
                 <button onClick={handleLogout} className="w-full text-left px-3 py-2.5 text-sm text-red-600 hover:bg-red-50 rounded-lg">Keluar</button>
               </>
             ) : (
               <div className="flex gap-2 px-3 pt-2">
                 <Link href="/auth/login" onClick={() => setMobileOpen(false)} className="flex-1 text-center py-2 text-sm font-medium border border-stone-300 rounded-lg text-stone-700 hover:bg-stone-50">Masuk</Link>
-                <Link href="/auth/register" onClick={() => setMobileOpen(false)} className="flex-1 text-center py-2 text-sm font-medium bg-amber-800 text-white rounded-lg hover:bg-amber-900">Daftar</Link>
+                <Link href="/auth/register" onClick={() => setMobileOpen(false)} className="flex-1 text-center py-2 text-sm font-medium bg-blue-900 text-white rounded-lg hover:bg-blue-950">Daftar</Link>
               </div>
             )}
           </div>

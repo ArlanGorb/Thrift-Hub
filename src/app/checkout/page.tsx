@@ -34,7 +34,7 @@ const PAYMENT_METHODS: { value: PaymentMethod; label: string; icon: React.ReactN
 
 export default function CheckoutPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-stone-50 flex items-center justify-center"><div className="w-10 h-10 border-4 border-amber-800 border-t-transparent rounded-full animate-spin" /></div>}>
+    <Suspense fallback={<div className="min-h-screen bg-stone-50 flex items-center justify-center"><div className="w-10 h-10 border-4 border-blue-900 border-t-transparent rounded-full animate-spin" /></div>}>
       <CheckoutContent />
     </Suspense>
   );
@@ -134,7 +134,7 @@ function CheckoutContent() {
       <div className="min-h-screen bg-stone-50 flex items-center justify-center">
         <div className="text-center">
           <p className="text-stone-600 mb-4">Keranjang Anda kosong.</p>
-          <Link href="/products" className="text-amber-800 font-semibold hover:underline">
+          <Link href="/products" className="text-blue-900 font-semibold hover:underline">
             Mulai Belanja
           </Link>
         </div>
@@ -172,7 +172,7 @@ function CheckoutContent() {
                       onChange={(e) => update('customer_name', e.target.value)}
                       placeholder="Masukkan nama lengkap Anda"
                       className={`w-full px-4 py-2.5 border rounded-xl text-sm bg-white transition-colors ${
-                        errors.customer_name ? 'border-red-400' : 'border-stone-200 focus:border-amber-500'
+                        errors.customer_name ? 'border-red-400' : 'border-stone-200 focus:border-blue-600'
                       }`}
                     />
                     {errors.customer_name && (
@@ -189,7 +189,7 @@ function CheckoutContent() {
                       onChange={(e) => update('customer_email', e.target.value)}
                       placeholder="you@example.com"
                       className={`w-full px-4 py-2.5 border rounded-xl text-sm bg-white transition-colors ${
-                        errors.customer_email ? 'border-red-400' : 'border-stone-200 focus:border-amber-500'
+                        errors.customer_email ? 'border-red-400' : 'border-stone-200 focus:border-blue-600'
                       }`}
                     />
                     {errors.customer_email && (
@@ -206,7 +206,7 @@ function CheckoutContent() {
                       onChange={(e) => update('customer_phone', e.target.value)}
                       placeholder="08xx-xxxx-xxxx"
                       className={`w-full px-4 py-2.5 border rounded-xl text-sm bg-white transition-colors ${
-                        errors.customer_phone ? 'border-red-400' : 'border-stone-200 focus:border-amber-500'
+                        errors.customer_phone ? 'border-red-400' : 'border-stone-200 focus:border-blue-600'
                       }`}
                     />
                     {errors.customer_phone && (
@@ -229,7 +229,7 @@ function CheckoutContent() {
                     placeholder="Jalan, Kota, Provinsi, Kode Pos"
                     rows={3}
                     className={`w-full px-4 py-2.5 border rounded-xl text-sm resize-none bg-white transition-colors ${
-                      errors.shipping_address ? 'border-red-400' : 'border-stone-200 focus:border-amber-500'
+                      errors.shipping_address ? 'border-red-400' : 'border-stone-200 focus:border-blue-600'
                     }`}
                   />
                   {errors.shipping_address && (
@@ -245,7 +245,7 @@ function CheckoutContent() {
                     onChange={(e) => update('notes', e.target.value)}
                     placeholder="Instruksi khusus..."
                     rows={2}
-                    className="w-full px-4 py-2.5 border border-stone-200 rounded-xl text-sm resize-none bg-white focus:border-amber-500"
+                    className="w-full px-4 py-2.5 border border-stone-200 rounded-xl text-sm resize-none bg-white focus:border-blue-600"
                   />
                 </div>
               </div>
@@ -259,7 +259,7 @@ function CheckoutContent() {
                       key={method.value}
                       className={`flex items-start gap-4 p-4 rounded-xl border-2 cursor-pointer transition-colors ${
                         form.payment_method === method.value
-                          ? 'border-amber-700 bg-amber-50'
+                          ? 'border-blue-800 bg-blue-50'
                           : 'border-stone-200 hover:border-stone-300'
                       }`}
                     >
@@ -269,11 +269,11 @@ function CheckoutContent() {
                         value={method.value}
                         checked={form.payment_method === method.value}
                         onChange={() => update('payment_method', method.value)}
-                        className="mt-0.5 accent-amber-700"
+                        className="mt-0.5 accent-blue-800"
                       />
                       <div className="flex-1">
                         <div className="flex items-center gap-2">
-                          <span className="text-amber-800">{method.icon}</span>
+                          <span className="text-blue-900">{method.icon}</span>
                           <span className="font-semibold text-stone-800">{method.label}</span>
                         </div>
                         <p className="text-sm text-stone-500 mt-0.5">{method.desc}</p>
@@ -331,14 +331,14 @@ function CheckoutContent() {
                 <div className="border-t border-stone-100 pt-4 mb-6">
                   <div className="flex justify-between">
                     <span className="font-bold text-stone-800">Total</span>
-                    <span className="font-bold text-xl text-amber-800">{formatPrice(finalTotal)}</span>
+                    <span className="font-bold text-xl text-blue-900">{formatPrice(finalTotal)}</span>
                   </div>
                 </div>
 
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full flex items-center justify-center gap-2 bg-amber-800 text-white font-bold py-3.5 rounded-xl hover:bg-amber-900 disabled:opacity-50 transition-all active:scale-95"
+                  className="w-full flex items-center justify-center gap-2 bg-blue-900 text-white font-bold py-3.5 rounded-xl hover:bg-blue-950 disabled:opacity-50 transition-all active:scale-95"
                 >
                   {submitting ? (
                     <>

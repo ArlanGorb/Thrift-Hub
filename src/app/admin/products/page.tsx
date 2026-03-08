@@ -125,7 +125,7 @@ export default function AdminProductsPage() {
   if (loading || !user || user.role !== 'admin') {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="w-10 h-10 border-4 border-amber-800 border-t-transparent rounded-full animate-spin" />
+        <div className="w-10 h-10 border-4 border-blue-900 border-t-transparent rounded-full animate-spin" />
       </div>
     );
   }
@@ -141,7 +141,7 @@ export default function AdminProductsPage() {
           </div>
           <button
             onClick={openAdd}
-            className="flex items-center gap-2 bg-amber-800 text-white font-bold px-5 py-2.5 rounded-xl hover:bg-amber-900 transition-colors"
+            className="flex items-center gap-2 bg-blue-900 text-white font-bold px-5 py-2.5 rounded-xl hover:bg-blue-950 transition-colors"
           >
             <Plus className="w-4 h-4" />
             Tambah Produk
@@ -156,7 +156,7 @@ export default function AdminProductsPage() {
             placeholder="Cari berdasarkan nama atau kategori..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 bg-white border border-stone-200 rounded-xl text-sm focus:border-amber-500 outline-none"
+            className="w-full pl-10 pr-4 py-2.5 bg-white border border-stone-200 rounded-xl text-sm focus:border-blue-600 outline-none"
           />
         </div>
 
@@ -193,7 +193,7 @@ export default function AdminProductsPage() {
                     <td className="px-5 py-3">
                       <ConditionBadge condition={product.condition} />
                     </td>
-                    <td className="px-5 py-3 font-semibold text-amber-800">{formatPrice(product.price)}</td>
+                    <td className="px-5 py-3 font-semibold text-blue-900">{formatPrice(product.price)}</td>
                     <td className="px-5 py-3">
                       <span className={product.stock === 0 ? 'text-red-500' : 'text-stone-600'}>
                         {product.stock}
@@ -203,7 +203,7 @@ export default function AdminProductsPage() {
                       <div className="flex items-center gap-2">
                         <button
                           onClick={() => openEdit(product)}
-                          className="p-1.5 rounded-lg hover:bg-amber-50 text-stone-400 hover:text-amber-700 transition-colors"
+                          className="p-1.5 rounded-lg hover:bg-blue-50 text-stone-400 hover:text-blue-800 transition-colors"
                           title="Edit"
                         >
                           <Pencil className="w-4 h-4" />
@@ -249,7 +249,7 @@ export default function AdminProductsPage() {
                   type="text"
                   value={form.name}
                   onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
-                  className="w-full px-3 py-2 border border-stone-200 rounded-xl text-sm outline-none focus:border-amber-500"
+                  className="w-full px-3 py-2 border border-stone-200 rounded-xl text-sm outline-none focus:border-blue-600"
                 />
               </div>
               <div className="grid grid-cols-2 gap-3">
@@ -261,7 +261,7 @@ export default function AdminProductsPage() {
                     step={0.01}
                     value={form.price}
                     onChange={(e) => setForm((f) => ({ ...f, price: parseFloat(e.target.value) }))}
-                    className="w-full px-3 py-2 border border-stone-200 rounded-xl text-sm outline-none focus:border-amber-500"
+                    className="w-full px-3 py-2 border border-stone-200 rounded-xl text-sm outline-none focus:border-blue-600"
                   />
                 </div>
                 <div>
@@ -271,7 +271,7 @@ export default function AdminProductsPage() {
                     min={0}
                     value={form.stock}
                     onChange={(e) => setForm((f) => ({ ...f, stock: parseInt(e.target.value) }))}
-                    className="w-full px-3 py-2 border border-stone-200 rounded-xl text-sm outline-none focus:border-amber-500"
+                    className="w-full px-3 py-2 border border-stone-200 rounded-xl text-sm outline-none focus:border-blue-600"
                   />
                 </div>
               </div>
@@ -281,7 +281,7 @@ export default function AdminProductsPage() {
                   <select
                     value={form.category}
                     onChange={(e) => setForm((f) => ({ ...f, category: e.target.value as typeof form.category }))}
-                    className="w-full px-3 py-2 border border-stone-200 rounded-xl text-sm outline-none focus:border-amber-500 bg-white"
+                    className="w-full px-3 py-2 border border-stone-200 rounded-xl text-sm outline-none focus:border-blue-600 bg-white"
                   >
                     {PRODUCT_CATEGORIES.map((c) => (
                       <option key={c} value={c}>{c}</option>
@@ -293,7 +293,7 @@ export default function AdminProductsPage() {
                   <select
                     value={form.size}
                     onChange={(e) => setForm((f) => ({ ...f, size: e.target.value }))}
-                    className="w-full px-3 py-2 border border-stone-200 rounded-xl text-sm outline-none focus:border-amber-500 bg-white"
+                    className="w-full px-3 py-2 border border-stone-200 rounded-xl text-sm outline-none focus:border-blue-600 bg-white"
                   >
                     {PRODUCT_SIZES.map((s) => (
                       <option key={s} value={s}>{s}</option>
@@ -309,7 +309,7 @@ export default function AdminProductsPage() {
                   max={10}
                   value={form.condition}
                   onChange={(e) => setForm((f) => ({ ...f, condition: parseInt(e.target.value) }))}
-                  className="w-full accent-amber-700"
+                  className="w-full accent-blue-800"
                 />
                 <div className="flex justify-between text-xs text-stone-400 mt-0.5">
                   <span>Buruk (1)</span>
@@ -324,7 +324,7 @@ export default function AdminProductsPage() {
                   value={form.image}
                   onChange={(e) => setForm((f) => ({ ...f, image: e.target.value }))}
                   placeholder="https://images.unsplash.com/..."
-                  className="w-full px-3 py-2 border border-stone-200 rounded-xl text-sm outline-none focus:border-amber-500"
+                  className="w-full px-3 py-2 border border-stone-200 rounded-xl text-sm outline-none focus:border-blue-600"
                 />
               </div>
               <div>
@@ -333,7 +333,7 @@ export default function AdminProductsPage() {
                   rows={3}
                   value={form.description}
                   onChange={(e) => setForm((f) => ({ ...f, description: e.target.value }))}
-                  className="w-full px-3 py-2 border border-stone-200 rounded-xl text-sm outline-none focus:border-amber-500 resize-none"
+                  className="w-full px-3 py-2 border border-stone-200 rounded-xl text-sm outline-none focus:border-blue-600 resize-none"
                 />
               </div>
               <div className="flex gap-5">
@@ -342,7 +342,7 @@ export default function AdminProductsPage() {
                     type="checkbox"
                     checked={form.is_featured}
                     onChange={(e) => setForm((f) => ({ ...f, is_featured: e.target.checked }))}
-                    className="accent-amber-700"
+                    className="accent-blue-800"
                   />
                   <span className="text-sm text-stone-700">Unggulan</span>
                 </label>
@@ -351,7 +351,7 @@ export default function AdminProductsPage() {
                     type="checkbox"
                     checked={form.is_best_seller}
                     onChange={(e) => setForm((f) => ({ ...f, is_best_seller: e.target.checked }))}
-                    className="accent-amber-700"
+                    className="accent-blue-800"
                   />
                   <span className="text-sm text-stone-700">Paling Laris</span>
                 </label>
@@ -367,7 +367,7 @@ export default function AdminProductsPage() {
               <button
                 onClick={handleSave}
                 disabled={saving || !form.name || !form.image || form.price <= 0}
-                className="flex items-center gap-2 px-5 py-2 text-sm font-bold text-white bg-amber-800 rounded-xl hover:bg-amber-900 disabled:opacity-50 transition-colors"
+                className="flex items-center gap-2 px-5 py-2 text-sm font-bold text-white bg-blue-900 rounded-xl hover:bg-blue-950 disabled:opacity-50 transition-colors"
               >
                 {saving ? (
                   <>

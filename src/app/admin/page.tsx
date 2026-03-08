@@ -37,7 +37,7 @@ export default function AdminDashboardPage() {
   if (loading || !user || user.role !== 'admin') {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="w-10 h-10 border-4 border-amber-800 border-t-transparent rounded-full animate-spin" />
+        <div className="w-10 h-10 border-4 border-blue-900 border-t-transparent rounded-full animate-spin" />
       </div>
     );
   }
@@ -47,7 +47,7 @@ export default function AdminDashboardPage() {
       label: 'Total Produk',
       value: MOCK_PRODUCTS.length,
       icon: <Package className="w-5 h-5" />,
-      color: 'bg-amber-50 text-amber-700',
+      color: 'bg-blue-50 text-blue-800',
     },
     {
       label: 'Pesanan Masuk',
@@ -81,7 +81,7 @@ export default function AdminDashboardPage() {
       <div className="max-w-5xl mx-auto px-4">
         {/* Header */}
         <div className="flex items-center gap-3 mb-8">
-          <div className="w-10 h-10 rounded-xl bg-amber-800 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-xl bg-blue-900 flex items-center justify-center">
             <LayoutDashboard className="w-5 h-5 text-white" />
           </div>
           <div>
@@ -110,10 +110,10 @@ export default function AdminDashboardPage() {
             <Link
               key={link.href}
               href={link.href}
-              className="bg-white rounded-2xl border border-stone-100 p-5 flex items-center justify-between hover:border-amber-300 hover:shadow-sm transition-all group"
+              className="bg-white rounded-2xl border border-stone-100 p-5 flex items-center justify-between hover:border-blue-400 hover:shadow-sm transition-all group"
             >
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700">
+                <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-800">
                   {link.icon}
                 </div>
                 <div>
@@ -121,7 +121,7 @@ export default function AdminDashboardPage() {
                   <p className="text-xs text-stone-400">{link.description}</p>
                 </div>
               </div>
-              <ChevronRight className="w-4 h-4 text-stone-400 group-hover:text-amber-700 transition-colors" />
+              <ChevronRight className="w-4 h-4 text-stone-400 group-hover:text-blue-800 transition-colors" />
             </Link>
           ))}
         </div>

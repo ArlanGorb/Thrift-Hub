@@ -27,26 +27,26 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-full bg-amber-700 flex items-center justify-center">
+              <div className="w-9 h-9 rounded-full bg-blue-800 flex items-center justify-center">
                 <Leaf className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold text-white">
-                Thrift<span className="text-amber-500">Hub</span>
+                Thrift<span className="text-blue-600">Hub</span>
               </span>
             </Link>
             <p className="text-sm text-stone-400 leading-relaxed mb-6">
               Platform jual beli barang bekas khusus mahasiswa
-              <span className="text-amber-400 font-medium"> Universitas Klabat (UNKLAB)</span>.
+              <span className="text-blue-500 font-medium"> Universitas Klabat (UNKLAB)</span>.
               Belanja hemat, tampil keren, dan jaga lingkungan bersama.
             </p>
             <div className="flex gap-3">
-              <a href="#" aria-label="Instagram" className="w-9 h-9 rounded-full bg-stone-800 hover:bg-amber-700 flex items-center justify-center transition-colors">
+              <a href="#" aria-label="Instagram" className="w-9 h-9 rounded-full bg-stone-800 hover:bg-blue-800 flex items-center justify-center transition-colors">
                 <Instagram className="w-4 h-4" />
               </a>
-              <a href="#" aria-label="Twitter" className="w-9 h-9 rounded-full bg-stone-800 hover:bg-amber-700 flex items-center justify-center transition-colors">
+              <a href="#" aria-label="Twitter" className="w-9 h-9 rounded-full bg-stone-800 hover:bg-blue-800 flex items-center justify-center transition-colors">
                 <Twitter className="w-4 h-4" />
               </a>
-              <a href="#" aria-label="Facebook" className="w-9 h-9 rounded-full bg-stone-800 hover:bg-amber-700 flex items-center justify-center transition-colors">
+              <a href="#" aria-label="Facebook" className="w-9 h-9 rounded-full bg-stone-800 hover:bg-blue-800 flex items-center justify-center transition-colors">
                 <Facebook className="w-4 h-4" />
               </a>
             </div>
@@ -60,7 +60,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-stone-400 hover:text-amber-400 transition-colors"
+                    className="text-sm text-stone-400 hover:text-blue-500 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -77,7 +77,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-stone-400 hover:text-amber-400 transition-colors"
+                    className="text-sm text-stone-400 hover:text-blue-500 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -91,16 +91,16 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Hubungi Kami</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm text-stone-400">
-                <MapPin className="w-4 h-4 mt-0.5 text-amber-600 shrink-0" />
+                <MapPin className="w-4 h-4 mt-0.5 text-blue-700 shrink-0" />
                 <span>Universitas Klabat, Airmadidi, Sulawesi Utara</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-stone-400">
-                <Phone className="w-4 h-4 text-amber-600 shrink-0" />
+                <Phone className="w-4 h-4 text-blue-700 shrink-0" />
                 <span>+62 431-891035</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-stone-400">
-                <Mail className="w-4 h-4 text-amber-600 shrink-0" />
-                <a href="mailto:thrifthub@unklab.ac.id" className="hover:text-amber-400 transition-colors">
+                <Mail className="w-4 h-4 text-blue-700 shrink-0" />
+                <a href="mailto:thrifthub@unklab.ac.id" className="hover:text-blue-500 transition-colors">
                   thrifthub@unklab.ac.id
                 </a>
               </li>

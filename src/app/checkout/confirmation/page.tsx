@@ -23,9 +23,9 @@ function ConfirmationContent() {
         </p>
 
         {/* Order ID */}
-        <div className="bg-amber-50 border border-amber-100 rounded-2xl p-5 mb-6">
+        <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 mb-6">
           <p className="text-sm text-stone-600 mb-1">ID Pesanan Anda</p>
-          <p className="text-2xl font-mono font-bold text-amber-800 tracking-wider">{orderId}</p>
+          <p className="text-2xl font-mono font-bold text-blue-900 tracking-wider">{orderId}</p>
           <p className="text-xs text-stone-500 mt-2">Simpan ID ini untuk melacak pesanan Anda</p>
         </div>
 
@@ -64,7 +64,7 @@ function ConfirmationContent() {
         <div className="flex flex-col sm:flex-row gap-3">
           <Link
             href="/orders"
-            className="flex-1 flex items-center justify-center gap-2 bg-amber-800 text-white font-semibold py-3 rounded-xl hover:bg-amber-900 transition-all active:scale-95"
+            className="flex-1 flex items-center justify-center gap-2 bg-blue-900 text-white font-semibold py-3 rounded-xl hover:bg-blue-950 transition-all active:scale-95"
           >
             <Package className="w-4 h-4" /> Lacak Pesanan Saya
           </Link>
@@ -86,7 +86,7 @@ function ConfirmationContent() {
 
 export default function ConfirmationPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-10 h-10 border-4 border-amber-800 border-t-transparent rounded-full animate-spin" /></div>}>
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-10 h-10 border-4 border-blue-900 border-t-transparent rounded-full animate-spin" /></div>}>
       <ConfirmationContent />
     </Suspense>
   );

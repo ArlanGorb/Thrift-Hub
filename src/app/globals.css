@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafaf8;
-  --foreground: #1a1a1a;
-  --primary: #8b5e3c;
-  --primary-dark: #6d4a2f;
-  --accent: #4a7c59;
-  --accent-light: #e8f5ec;
-  --warm-50: #fdf8f3;
-  --warm-100: #f5ede1;
-  --warm-200: #e8d5c0;
+  --background: #f0f4f8;
+  --foreground: #0f172a;
+  --primary: #1e3a8a;
+  --primary-dark: #162d6e;
+  --accent: #3b82f6;
+  --accent-light: #dbeafe;
+  --warm-50: #eff6ff;
+  --warm-100: #dbeafe;
+  --warm-200: #bfdbfe;
 }
 
 @theme inline {
@@ -41,7 +41,7 @@ body {
   background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-  background: #c4a882;
+  background: #3b82f6;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -64,7 +64,7 @@ body {
 
 /* Hero gradient */
 .hero-gradient {
-  background: linear-gradient(135deg, #2c1810 0%, #5c3a1e 40%, #8b5e3c 70%, #a87850 100%);
+  background: linear-gradient(135deg, #0a1628 0%, #0f2255 40%, #1e3a8a 70%, #2563eb 100%);
 }
 
 /* Smooth transitions */

@@ -34,7 +34,7 @@ export default function StarRating({
           >
             <Star
               className={`${sizes[size]} ${
-                filled ? 'fill-amber-400 text-amber-400' : 'text-stone-300'
+                filled ? 'fill-blue-500 text-blue-500' : 'text-stone-300'
               } transition-colors`}
             />
           </button>

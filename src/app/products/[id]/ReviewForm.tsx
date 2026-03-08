@@ -73,7 +73,7 @@ export default function ReviewForm({ productId, userName, onSubmit }: ReviewForm
           placeholder="Bagikan pendapat Anda tentang item ini..."
           rows={4}
           maxLength={500}
-          className="w-full px-4 py-3 border border-stone-200 rounded-xl text-sm resize-none focus:border-amber-500 bg-white"
+          className="w-full px-4 py-3 border border-stone-200 rounded-xl text-sm resize-none focus:border-blue-600 bg-white"
         />
         <p className="text-xs text-stone-400 mt-1 text-right">{comment.length}/500</p>
       </div>
@@ -81,7 +81,7 @@ export default function ReviewForm({ productId, userName, onSubmit }: ReviewForm
       <button
         type="submit"
         disabled={rating === 0 || submitting}
-        className="px-6 py-2.5 bg-amber-800 text-white text-sm font-semibold rounded-xl hover:bg-amber-900 disabled:opacity-50 disabled:cursor-not-allowed transition-colors active:scale-95"
+        className="px-6 py-2.5 bg-blue-900 text-white text-sm font-semibold rounded-xl hover:bg-blue-950 disabled:opacity-50 disabled:cursor-not-allowed transition-colors active:scale-95"
       >
         {submitting ? 'Mengirim...' : 'Kirim Ulasan'}
       </button>

@@ -55,7 +55,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         {/* Badges overlay */}
         <div className="absolute top-3 left-3 flex flex-col gap-1.5">
           {product.is_best_seller && (
-            <span className="bg-amber-700 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+            <span className="bg-blue-800 text-white text-xs font-bold px-2.5 py-1 rounded-full">
               Paling Laris
             </span>
           )}
@@ -75,7 +75,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
           <Link
             href={`/products/${product.id}`}
-            className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-amber-50 transition-colors"
+            className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-blue-50 transition-colors"
             title="Lihat cepat"
             onClick={(e) => e.stopPropagation()}
           >
@@ -84,7 +84,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           <button
             onClick={handleAddToCart}
             disabled={isOutOfStock}
-            className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-amber-50 transition-colors disabled:opacity-50"
+            className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-blue-50 transition-colors disabled:opacity-50"
             title="Tambah ke keranjang"
           >
             <ShoppingCart className="w-4 h-4 text-stone-700" />
@@ -103,7 +103,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       <div className="p-4">
         <div className="flex items-start justify-between gap-2 mb-1">
           <Link href={`/products/${product.id}`}>
-            <h3 className="font-semibold text-stone-800 text-sm leading-tight hover:text-amber-800 transition-colors line-clamp-2">
+            <h3 className="font-semibold text-stone-800 text-sm leading-tight hover:text-blue-900 transition-colors line-clamp-2">
               {product.name}
             </h3>
           </Link>
@@ -130,7 +130,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         </div>
 
         <div className="flex items-center justify-between">
-          <span className="text-lg font-bold text-amber-800">
+          <span className="text-lg font-bold text-blue-900">
             {formatPrice(product.price)}
           </span>
           <button
@@ -139,7 +139,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all active:scale-95 ${
               isOutOfStock
                 ? 'bg-stone-100 text-stone-400 cursor-not-allowed'
-                : 'bg-amber-800 text-white hover:bg-amber-900'
+                : 'bg-blue-900 text-white hover:bg-blue-950'
             }`}
           >
             <ShoppingCart className="w-3.5 h-3.5" />
