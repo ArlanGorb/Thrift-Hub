@@ -1,4 +1,170 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌿 Thrift Hub
+
+A modern, sustainable e-commerce platform for buying and selling second-hand fashion. Built with Next.js 16, TypeScript, Tailwind CSS v4, and Supabase.
+
+---
+
+## ✨ Features
+
+- **Product Catalog** — Browse 12+ products with search, category/size/price filters, and sorting
+- **Product Detail** — Image gallery, condition badges, add-to-cart, and customer reviews
+- **Shopping Cart** — Persistent cart with quantity controls and order summary
+- **Checkout** — Full checkout form with bank transfer, e-wallet, and cash-on-delivery support
+- **Order Tracking** — View order history with status progress timeline
+- **User Auth** — Login / Register with Supabase or demo mode
+- **Profile** — Edit name, email, phone, and shipping address
+- **Wishlist** — Save favourites and move them to cart
+- **Admin Dashboard** — Stats overview, manage products (CRUD), and update order statuses
+- **Demo Mode** — Fully functional without any Supabase setup using mock data + localStorage
+
+---
+
+## 🚀 Getting Started
+
+### 1. Prerequisites
+
+- Node.js 18+
+- npm or pnpm
+
+### 2. Install dependencies
+
+```bash
+cd thrift-hub
+npm install
+```
+
+### 3. Configure environment variables
+
+Copy the example file and fill in your values:
+
+```bash
+cp .env.local.example .env.local
+```
+
+Edit `.env.local`:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+> **Note:** If you leave these blank or don't set them, the app runs in **Demo Mode** using mock data and localStorage — no Supabase account required.
+
+### 4. (Optional) Set up Supabase
+
+1. Create a project at [supabase.com](https://supabase.com)
+2. Open the SQL Editor in the Supabase dashboard
+3. Paste and run the contents of `supabase/schema.sql`
+4. Copy your project URL and anon key into `.env.local`
+
+### 5. Run the development server
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🔑 Demo Accounts
+
+The app ships with two built-in demo accounts (no Supabase required):
+
+| Role     | Email                    | Password  |
+|----------|--------------------------|-----------|
+| Admin    | admin@thrifthub.com      | admin123  |
+| Customer | user@thrifthub.com       | user123   |
+
+> Any other email/password combination also works and creates a new demo session.
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── page.tsx                      # Homepage
+│   ├── layout.tsx                    # Root layout (Navbar + Footer + Providers)
+│   ├── globals.css                   # Tailwind v4 theme + global styles
+│   ├── products/
+│   │   ├── page.tsx                  # Product catalog with filters
+│   │   └── [id]/
+│   │       ├── page.tsx              # Product detail + reviews
+│   │       └── ReviewForm.tsx        # Star rating + review submission
+│   ├── cart/page.tsx                 # Shopping cart
+│   ├── checkout/
+│   │   ├── page.tsx                  # Checkout form
+│   │   └── confirmation/page.tsx     # Order confirmation
+│   ├── orders/page.tsx               # Order history
+│   ├── wishlist/page.tsx             # Saved items
+│   ├── profile/page.tsx              # User profile editor
+│   ├── auth/
+│   │   ├── login/page.tsx            # Sign in
+│   │   └── register/page.tsx         # Sign up
+│   └── admin/
+│       ├── page.tsx                  # Dashboard stats
+│       ├── products/page.tsx         # Products CRUD
+│       └── orders/page.tsx           # Order status management
+├── components/
+│   ├── home/                         # Homepage section components
+│   ├── layout/                       # Navbar + Footer
+│   ├── products/                     # ProductCard
+│   └── ui/                           # Button, Badge, StarRating
+├── context/
+│   ├── CartContext.tsx               # Global cart state
+│   └── AuthContext.tsx               # Auth state (Supabase + demo)
+└── lib/
+    ├── types.ts                      # All TypeScript types
+    ├── mockData.ts                   # 12 demo products + orders + reviews
+    ├── supabase.ts                   # Supabase client
+    └── utils.ts                      # Shared utility functions
+supabase/
+└── schema.sql                        # Full Supabase DB schema + seed data
+```
+
+---
+
+## 🛠 Tech Stack
+
+| Layer       | Technology                          |
+|-------------|-------------------------------------|
+| Framework   | Next.js 16 (App Router)             |
+| Language    | TypeScript 5                        |
+| Styling     | Tailwind CSS v4 (CSS-based config)  |
+| Database    | Supabase (PostgreSQL)               |
+| Auth        | Supabase Auth                       |
+| Icons       | Lucide React                        |
+| Toasts      | react-hot-toast                     |
+| State       | React Context API                   |
+
+---
+
+## 🏗 Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 🌍 Deployment
+
+Works out of the box on [Vercel](https://vercel.com):
+
+1. Push to GitHub
+2. Import into Vercel
+3. Add `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` as environment variables
+4. Deploy
+
+---
+
+## 📄 License
+
+MIT
+
 
 ## Getting Started
 
